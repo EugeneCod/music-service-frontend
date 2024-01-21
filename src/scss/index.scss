@@ -1,0 +1,23 @@
+@import '../vendor/fonts';
+@import '../vendor/libs/normalize';
+@import './variables';
+
+body {
+  font-family: $app-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  background-color: $main-bg;
+  color: $main-font-color;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}

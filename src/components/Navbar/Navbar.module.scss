@@ -1,0 +1,84 @@
+@import '@/scss/variables';
+
+.root {
+  min-height: 100vh;
+  position: absolute;
+  width: 170px;
+  background-color: $additional-bg;
+  padding-top: 20px;
+  top: 0;
+  right: -170px;
+  transition: all 0.5s ease-in-out;
+  box-sizing: border-box;
+
+  &.opened {
+    right: 0;
+  }
+}
+
+.button {
+  background: $additional-bg;
+  border: none;
+  padding: 0;
+  width: 65px;
+  border-radius: 30px;
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  height: 55px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.arrow {
+  width: 30px;
+  transition: transform 0.5s ease-in-out;
+
+  &.inverted {
+    transform: rotate(180deg);
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  row-gap: 20px;
+}
+
+//.list-item {}
+
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  color: $additional-font-color;
+  text-decoration: none;
+  transition: opacity .3s ease;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .5;
+  }
+
+  .image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .text {
+
+  }
+
+}
+
