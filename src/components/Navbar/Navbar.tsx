@@ -1,15 +1,18 @@
 'use client';
 
 import { FC, useState } from 'react';
+import Link from 'next/link';
 import classNames from 'classnames/bind';
+import { usePathname } from 'next/navigation';
 
 import styles from './Navbar.module.scss';
-import Link from 'next/link';
+import { NAV_OPTIONS } from '@/utils/constants';
 
 const cx = classNames.bind(styles);
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const rootStyles = cx({
     root: true,
@@ -20,6 +23,13 @@ const Navbar: FC = () => {
     arrow: true,
     inverted: isOpen,
   });
+
+  function getLinkStyles(href: string, pathname: string) {
+    return cx({
+      link: true,
+      active: href === pathname,
+    });
+  }
 
   function handleOpenNavbar() {
     setIsOpen(!isOpen);
@@ -48,7 +58,9 @@ const Navbar: FC = () => {
       </button>
       <ul className={styles.list}>
         <li className={styles['list-item']}>
-          <Link className={styles.link} href="/">
+          <Link
+            className={getLinkStyles(NAV_OPTIONS.HOME.HREF, pathname)}
+            href={NAV_OPTIONS.HOME.HREF}>
             <svg
               className={styles.image}
               width="100px"
@@ -67,11 +79,13 @@ const Navbar: FC = () => {
                   fill="#af56fd"></path>{' '}
               </g>
             </svg>
-            Главная
+            {NAV_OPTIONS.HOME.TEXT}
           </Link>
         </li>
         <li className={styles['list-item']}>
-          <Link className={styles.link} href="/tracks">
+          <Link
+            className={getLinkStyles(NAV_OPTIONS.TRACKS.HREF, pathname)}
+            href={NAV_OPTIONS.TRACKS.HREF}>
             <svg
               className={styles.image}
               width="101px"
@@ -92,11 +106,13 @@ const Navbar: FC = () => {
                   stroke-linejoin="round"></path>{' '}
               </g>
             </svg>
-            Треки
+            {NAV_OPTIONS.TRACKS.TEXT}
           </Link>
         </li>
         <li className={styles['list-item']}>
-          <Link className={styles.link} href="/albums">
+          <Link
+            className={getLinkStyles(NAV_OPTIONS.ALBUMS.HREF, pathname)}
+            href={NAV_OPTIONS.ALBUMS.HREF}>
             <svg
               className={styles.image}
               width="100px"
@@ -148,7 +164,7 @@ const Navbar: FC = () => {
                 </defs>{' '}
               </g>
             </svg>
-            Альбомы
+            {NAV_OPTIONS.ALBUMS.TEXT}
           </Link>
         </li>
       </ul>

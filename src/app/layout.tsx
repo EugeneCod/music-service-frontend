@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 // import { Inter } from "next/font/google";
 import '@/scss/index.scss';
-import { Navbar } from '@/components';
+import { Container, Navbar } from '@/components';
 
 // const inter = Inter({ subsets: ["cyrillic"] });
 
@@ -18,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <div className="container">
+        
           <Navbar />
-          {children}
-        </div>
+          <Container>
+            {children}
+          </Container>
+        
       </body>
     </html>
   );
