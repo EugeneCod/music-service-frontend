@@ -1,8 +1,10 @@
 //colors
-$main-bg: #00030c;
-$additional-bg: #21213b;
-$main-font-color: #e3e3e3;
-$additional-font-color: #af56fd;
+$bg-main: #00030c;
+$bg-additional: #21213b;
+$bg-btn-green: #00c27b;
+$fcol-main: #e3e3e3;
+$fcol-additional: #af56fd;
+
 // $var-button-color: #1aff00;
 // $gray-button-color: #2a2525;
 // $conditional-color-if: #4848fd;
@@ -13,3 +15,10 @@ $additional-font-color: #af56fd;
 
 //font-families
 $app-font-family: 'Inter', Arial, Helvetica, sans-serif;
+
+//templates
+%header {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}

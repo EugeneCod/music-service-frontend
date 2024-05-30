@@ -4,12 +4,13 @@
   min-height: 100vh;
   position: absolute;
   width: 170px;
-  background-color: $additional-bg;
+  background-color: $bg-additional;
   padding-top: 20px;
   top: 0;
   right: -170px;
   transition: all 0.5s ease-in-out;
   box-sizing: border-box;
+  z-index: 10;
 
   &.opened {
     right: 0;
@@ -17,7 +18,7 @@
 }
 
 .button {
-  background: $additional-bg;
+  background: $bg-additional;
   border: none;
   padding: 0;
   width: 65px;
@@ -28,10 +29,11 @@
   justify-content: flex-start;
   padding-left: 10px;
   height: 55px;
-  transition: opacity 0.3s ease;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 
   &:hover {
-    opacity: .8;
+    box-shadow: $fcol-additional -4px 0px 2px;
   }
 }
 
@@ -61,7 +63,7 @@
   display: flex;
   align-items: center;
   column-gap: 8px;
-  color: $additional-font-color;
+  color: $fcol-additional;
   text-decoration: none;
   transition: opacity .3s ease;
 

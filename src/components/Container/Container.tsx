@@ -1,12 +1,12 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import styles from './Container.module.scss';
 
-interface ContainerProps {
+interface Props {
   children: ReactNode;
 }
 
-const Container: FC<ContainerProps> = ({ children }) => {
+const Container = ({ children }: Props) => {
   return <div className={styles.root}>{children}</div>;
 };
 

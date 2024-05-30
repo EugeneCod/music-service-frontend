@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-// import { Inter } from "next/font/google";
+
 import '@/scss/index.scss';
 import { Container, Navbar } from '@/components';
-
-// const inter = Inter({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
   title: 'Музыкальный сервис',
