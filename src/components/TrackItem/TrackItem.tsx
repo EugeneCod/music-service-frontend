@@ -4,9 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames/bind';
 
+import trashImage from '@/assets/images/trash.svg';
+import { ROUTES } from '@/utils/constants';
+
 import s from './TrackItem.module.scss';
 
 import type { Track } from '@/@types/track';
+import Link from 'next/link';
+
 
 interface Props {
   track: Track;
@@ -14,7 +19,7 @@ interface Props {
 
 const TrackItem = (props: Props) => {
   const { track } = props;
-  const { name, artist, picture } = track;
+  const { name, artist, picture, id } = track;
   const [isPlaying, setIsPlaying] = useState(false);
   const cx = classNames.bind(s);
 
@@ -30,19 +35,17 @@ const TrackItem = (props: Props) => {
   return (
     <article className={s['track-item']}>
       <div className={s['left-container']}>
-        {/* 
-        в css менять svg для кнопки через background
-        с использованием модификатора played
-        менять стили в зависимости от нажатия на кнопку
-        */}
         <button className={btnClass} type="button" onClick={handlePlayBtnClick} />
-        <Image width={50} height={50} className={s.image} src={picture} alt="Обложка" />
+        <Image width={50} height={50} className={s['image']} src={picture} alt="Обложка" />
         <div className={s['info-container']}>
-          <p className={s.name}>{name}</p>
-          <p className={s.artist}>{artist}</p>
+          <Link href={ROUTES.TRACKS.PATH + id} className={s['name']}>{name}</Link>
+          <p className={s['artist']}>{artist}</p>
         </div>
       </div>
-      <div className={s['right-container']}></div>
+      <div className={s['right-container']}>
+        <p className={s['duration']}>00:00/00:00</p>
+        <Image width={15} height={15} className={s['trash']} src={trashImage} alt="Обложка" />
+      </div>
     </article>
   );
 };

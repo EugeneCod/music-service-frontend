@@ -1,0 +1,89 @@
+@import '@/scss/variables';
+
+.page {
+  padding-top: 30px;
+}
+
+.link-to-tracks {
+  text-decoration: none;
+  background-color: #00030c;
+  border: 2px solid #00c27b;
+  outline: none;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: $fcol-main;
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity .2s ease;
+  margin-bottom: 15px;
+
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .6;
+  }
+}
+
+.track-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  .artist {
+    margin: 0;
+    font-size: 16px;
+    color: $fcol-muted;
+    
+  }
+  .name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .listens {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+.description-block {
+  grid-column: 1/3;
+  padding: 25px 0;
+
+  .description-header {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+  }
+  .description-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.comment-form {
+  grid-column: 1/3;
+  .input-name {
+
+  }
+  .input-comment {
+
+  }
+  .comment-submit {
+
+  }
+}

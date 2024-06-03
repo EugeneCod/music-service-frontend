@@ -2,8 +2,8 @@ import { Track } from '@/@types/track';
 
 export const ROUTES = {
   HOME: { PATH: '/' },
-  TRACKS: { PATH: '/tracks', CREATE: { PATH: '/tracks/create' } },
-  ALBUMS: { PATH: '/albums' },
+  TRACKS: { PATH: '/tracks/', CREATE: { PATH: '/tracks/create/' } },
+  ALBUMS: { PATH: '/albums/' },
 };
 
 export const NAV_OPTIONS = {
@@ -19,8 +19,8 @@ export const tracks: Track[] = [
     artist: 'Artist 1',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/c14d04fe-f6c9-4c90-99cd-2cf65588d4fc.mp3',
-    picture: 'http://localhost:5000/image/1526c948-b87e-4e34-b26c-d105d90bcc05.jpg',
+    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '1',
     comments: [],
   },
@@ -30,8 +30,8 @@ export const tracks: Track[] = [
     artist: 'Artist 2',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/c14d04fe-f6c9-4c90-99cd-2cf65588d4fc.mp3',
-    picture: 'http://localhost:5000/image/1526c948-b87e-4e34-b26c-d105d90bcc05.jpg',
+    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '2',
     comments: [],
   },
@@ -41,8 +41,8 @@ export const tracks: Track[] = [
     artist: 'Artist 3',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/c14d04fe-f6c9-4c90-99cd-2cf65588d4fc.mp3',
-    picture: 'http://localhost:5000/image/1526c948-b87e-4e34-b26c-d105d90bcc05.jpg',
+    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '1',
     comments: [],
   },
