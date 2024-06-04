@@ -2,8 +2,8 @@ import { Track } from '@/@types/track';
 
 export const ROUTES = {
   HOME: { PATH: '/' },
-  TRACKS: { PATH: '/tracks/', CREATE: { PATH: '/tracks/create/' } },
-  ALBUMS: { PATH: '/albums/' },
+  TRACKS: { PATH: '/tracks', CREATE: { PATH: '/tracks/create' } },
+  ALBUMS: { PATH: '/albums' },
 };
 
 export const NAV_OPTIONS = {

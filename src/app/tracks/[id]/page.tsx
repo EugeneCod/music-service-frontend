@@ -1,12 +1,21 @@
-import Link from 'next/link';
-import s from './page.module.scss';
+'use client';
 
-import { ROUTES, tracks } from '@/utils/constants';
+import Link from 'next/link';
 import Image from 'next/image';
 
-const page = () => {
+import { ROUTES, tracks } from '@/utils/constants';
+import { CommentForm } from '@/components';
+
+import s from './page.module.scss';
+
+const Page = () => {
   const track = tracks[0];
   const { id, name, artist, text, listens, audio, picture, albumId, comments } = track;
+
+  function handleSubmitComment(nameValue: string, commentValue: string) {
+    console.table({nameValue, commentValue})
+  }
+
   return (
     <main className={s['page']}>
       <Link href={ROUTES.TRACKS.PATH} className={s['link-to-tracks']}>
@@ -23,14 +32,10 @@ const page = () => {
           <h2 className={s['description-header']}>Текст</h2>
           <p className={s['description-text']}>{text}</p>
         </div>
-        <form className={s['comment-form']}>
-          <input type="text" className={s['input-name']} placeholder="Ваше имя" />
-          <input type="text" className={s['input-comment']} placeholder="Ваш комментарий" />
-          <button className={s['comment-submit']}>Отправить</button>
-        </form>
+        <CommentForm onSubmit={handleSubmitComment} />
       </article>
     </main>
   );
 };
 
-export default page;
+export default Page;

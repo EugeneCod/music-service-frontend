@@ -38,7 +38,7 @@ const TrackItem = (props: Props) => {
         <button className={btnClass} type="button" onClick={handlePlayBtnClick} />
         <Image width={50} height={50} className={s['image']} src={picture} alt="Обложка" />
         <div className={s['info-container']}>
-          <Link href={ROUTES.TRACKS.PATH + id} className={s['name']}>{name}</Link>
+          <Link href={ROUTES.TRACKS.PATH + '/' + id} className={s['name']}>{name}</Link>
           <p className={s['artist']}>{artist}</p>
         </div>
       </div>
