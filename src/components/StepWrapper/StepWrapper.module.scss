@@ -1,0 +1,99 @@
+@import '@/scss/variables';
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.list {
+  margin: 0;
+  border: 1px solid rgba(217, 0, 255, 0.46);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  padding-left: 2px;
+  &::marker {
+    content: none;
+  }
+  
+  &::after {
+    content: '';
+    flex: 1 1;
+    margin-left: 2px;
+    border-bottom: 1px solid $line-green;
+  }
+  &:last-child {
+    flex: 0 1 auto;
+  }
+  &:last-child::after {
+    content: none;
+  }
+}
+
+.active {
+  .marker {
+    &::before {
+      content: '';
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      border-radius: 8px;
+      animation: glowing 20s linear infinite;
+    }
+  }
+}
+
+.completed {
+  .marker {
+    color: transparent;
+    background-image: url('../../assets/images/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+  }
+}
+
+.marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  background-color: $bg-btn-green;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.text {
+  font-weight: 500
+}

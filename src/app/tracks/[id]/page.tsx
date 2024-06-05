@@ -8,7 +8,7 @@ import { CommentForm, CommentsList } from '@/components';
 
 import s from './page.module.scss';
 
-const Page = () => {
+const TrackPage = () => {
   const track = tracks[0];
   const { id, name, artist, text, listens, audio, picture, albumId, comments } = track;
 
@@ -46,4 +46,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default TrackPage;

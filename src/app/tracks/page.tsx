@@ -3,7 +3,7 @@ import s from './page.module.scss';
 import Link from 'next/link';
 import { TrackList } from '@/components';
 
-const Tracks = () => {
+const TracksPage = () => {
   return (
     <main className={s['main']}>
       <div className={s['top-container']}>
@@ -17,4 +17,4 @@ const Tracks = () => {
   );
 };
 
-export default Tracks;
+export default TracksPage;
