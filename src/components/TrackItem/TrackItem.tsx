@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import classNames from 'classnames/bind';
 
@@ -10,8 +11,6 @@ import { ROUTES } from '@/utils/constants';
 import s from './TrackItem.module.scss';
 
 import type { Track } from '@/@types/track';
-import Link from 'next/link';
-
 
 interface Props {
   track: Track;
@@ -29,22 +28,40 @@ const TrackItem = (props: Props) => {
   });
 
   function handlePlayBtnClick() {
-    setIsPlaying(prev => !prev);
+    setIsPlaying((prev) => !prev);
   }
 
   return (
     <article className={s['track-item']}>
       <div className={s['left-container']}>
-        <button className={btnClass} type="button" onClick={handlePlayBtnClick} />
-        <Image width={50} height={50} className={s['image']} src={picture} alt="Обложка" />
+        <button
+          className={btnClass}
+          type="button"
+          onClick={handlePlayBtnClick}
+        />
+        <Image
+          width={50}
+          height={50}
+          className={s['image']}
+          src={picture}
+          alt="Обложка"
+        />
         <div className={s['info-container']}>
-          <Link href={ROUTES.TRACKS.PATH + '/' + id} className={s['name']}>{name}</Link>
+          <Link href={ROUTES.TRACKS.PATH + '/' + id} className={s['name']}>
+            {name}
+          </Link>
           <p className={s['artist']}>{artist}</p>
         </div>
       </div>
       <div className={s['right-container']}>
         <p className={s['duration']}>00:00/00:00</p>
-        <Image width={15} height={15} className={s['trash']} src={trashImage} alt="Обложка" />
+        <Image
+          width={15}
+          height={15}
+          className={s['trash']}
+          src={trashImage}
+          alt="Обложка"
+        />
       </div>
     </article>
   );

@@ -5,7 +5,7 @@ import { ChangeEvent, useRef, useLayoutEffect, MutableRefObject } from 'react';
 import s from './Textarea.module.scss';
 
 interface Props {
-  id: string;
+  name: string;
   placeholder: string;
   minHeight?: number;
   value: string;
@@ -13,8 +13,9 @@ interface Props {
 }
 
 const Textarea = (props: Props) => {
-  const { id, value, placeholder, minHeight = 50, onChange } = props;
-  const textareaRef: MutableRefObject<HTMLTextAreaElement | null> = useRef(null);
+  const { name, value, placeholder, minHeight = 50, onChange } = props;
+  const textareaRef: MutableRefObject<HTMLTextAreaElement | null> =
+    useRef(null);
 
   useLayoutEffect(() => {
     if (textareaRef.current === null) {
@@ -28,7 +29,6 @@ const Textarea = (props: Props) => {
       textareaRef.current.scrollHeight,
       minHeight,
     )}px`;
-    
   }, [value, minHeight]);
 
   function handleChange(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -37,7 +37,7 @@ const Textarea = (props: Props) => {
 
   return (
     <textarea
-      id={id.toString()}
+      name={name}
       className={s['root']}
       ref={textareaRef}
       onChange={handleChange}

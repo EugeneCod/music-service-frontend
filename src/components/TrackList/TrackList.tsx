@@ -1,7 +1,8 @@
-import { Track } from '@/@types/track';
-import React from 'react';
-import s from './TrackList.module.scss';
 import { TrackItem } from '../';
+
+import s from './TrackList.module.scss';
+
+import type { Track } from '@/@types/track';
 
 interface Props {
   tracks: Track[];

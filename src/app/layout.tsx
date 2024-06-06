@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
-
-import '@/scss/index.scss';
 import { Container, Navbar } from '@/components';
+
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import '@/scss/index.scss';
 
 export const metadata: Metadata = {
   title: 'Музыкальный сервис',
@@ -11,19 +12,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="ru">
       <body>
-        
-          <Navbar />
-          <Container>
-            {children}
-          </Container>
-        
+        <Navbar />
+        <Container>{children}</Container>
       </body>
     </html>
   );
 }
-

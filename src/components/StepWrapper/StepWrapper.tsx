@@ -8,7 +8,7 @@ import type { ReactElement } from 'react';
 interface Props {
   activeStep: number;
   children: ReactElement | ReactElement[];
-  steps: string [];
+  steps: string[];
 }
 
 const StepWrapper = (props: Props) => {

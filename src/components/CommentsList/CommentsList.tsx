@@ -11,9 +11,8 @@ interface Props {
 const CommentsList = (props: Props) => {
   const { comments } = props;
 
-  return (
-    comments.length
-    ? <ul className={s['list']}>
+  return comments.length ? (
+    <ul className={s['list']}>
       {comments.map((comment) => (
         <li className={s['list-item']} key={comment.id}>
           <p className={s['username']}>{comment.username}</p>
@@ -21,7 +20,8 @@ const CommentsList = (props: Props) => {
         </li>
       ))}
     </ul>
-    : <p className={s['no-comments']}>Комментариев пока нет.</p>
+  ) : (
+    <p className={s['no-comments']}>Комментариев пока нет.</p>
   );
 };
 

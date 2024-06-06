@@ -19,8 +19,10 @@ export const tracks: Track[] = [
     artist: 'Artist 1',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
-    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
+    audio:
+      'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture:
+      'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '1',
     comments: [],
   },
@@ -30,8 +32,10 @@ export const tracks: Track[] = [
     artist: 'Artist 2',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
-    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
+    audio:
+      'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture:
+      'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '2',
     comments: [],
   },
@@ -41,8 +45,10 @@ export const tracks: Track[] = [
     artist: 'Artist 3',
     text: 'Something text',
     listens: 0,
-    audio: 'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
-    picture: 'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
+    audio:
+      'http://localhost:5000/audio/54f96260-9800-4e99-b962-5fc39f606b24.mp3',
+    picture:
+      'http://localhost:5000/image/a71b1e7d-65b8-4aef-bedf-2acf39683ed5.jpg',
     albumId: '1',
     comments: [],
   },

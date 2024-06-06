@@ -19,9 +19,14 @@ const TracksCreatePage = () => {
       <StepWrapper activeStep={activeStep} steps={steps}>
         <div className={s['step-container']}>
           <form>
-            <input type="text" placeholder='Введите название трека' />
-            <input type="text" placeholder='Введите имя исполнителя'/>
-            <Textarea id={'song-text'} placeholder='Введите текст песни' value={textValue} onChange={(evt) => setTextValue(evt.target.value)}/>
+            <input type="text" placeholder="Введите название трека" />
+            <input type="text" placeholder="Введите имя исполнителя" />
+            <Textarea
+              name="song-text"
+              placeholder="Введите текст песни"
+              value={textValue}
+              onChange={(evt) => setTextValue(evt.target.value)}
+            />
           </form>
         </div>
       </StepWrapper>
@@ -30,14 +35,16 @@ const TracksCreatePage = () => {
           onClick={() => {
             setActiveStep(activeStep - 1);
           }}
-          className={`${s['step-btn']} ${activeStep === 1 ? s['disabled'] : ''}`}>
+          className={`${s['step-btn']} ${activeStep === 1 ? s['disabled'] : ''}`}
+        >
           Назад
         </button>
         <button
           onClick={() => {
             setActiveStep(activeStep + 1);
           }}
-          className={`${s['step-btn']} ${activeStep === steps.length ? s['disabled'] : ''}`}>
+          className={`${s['step-btn']} ${activeStep === steps.length ? s['disabled'] : ''}`}
+        >
           Далее
         </button>
       </div>

@@ -1,5 +1,3 @@
-
-
 const Albums = () => {
   return <div>/albums</div>;
 };

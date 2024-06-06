@@ -1,6 +1,6 @@
 @import '@/scss/variables';
 
-.root {
+.input {
   background-color: $bg-main;
   border-radius: 3px;
   padding: 5px;
@@ -10,16 +10,10 @@
   border-right: $fcol-additional 1px solid;
   border-bottom: $fcol-additional 1px solid;
   color: $fcol-main;
-  box-sizing: border-box;
-  resize: none;
-  overflow: hidden;
-  line-height: 1.21;
-
   &:focus {
     border-top: $fcol-additional 1px solid;
     border-left: $fcol-additional 1px solid;
   }
-
   &::placeholder {
     color: $fcol-dim;
   }

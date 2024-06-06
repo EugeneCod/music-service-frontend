@@ -24,12 +24,11 @@
   background-size: 15px 15px;
   background-repeat: no-repeat;
   cursor: pointer;
-  opacity: .8;
+  opacity: 0.8;
 
   &:hover {
     opacity: 1;
   }
-
 
   &_is-playing {
     background-image: url('../../assets/images/btn-pause.svg');
@@ -55,7 +54,7 @@
       text-decoration: underline;
     }
     &:active {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
@@ -79,14 +78,14 @@
   & .trash {
     width: 15px;
     height: 15px;
-    opacity: .8;
+    opacity: 0.8;
     cursor: pointer;
 
     &:hover {
       opacity: 1;
     }
     &:active {
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 }

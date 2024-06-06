@@ -66,19 +66,19 @@
   column-gap: 8px;
   color: $fcol-additional;
   text-decoration: none;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 
   &.active {
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
-    }
+  }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &:active {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .image {
@@ -86,4 +86,3 @@
     height: 30px;
   }
 }
-

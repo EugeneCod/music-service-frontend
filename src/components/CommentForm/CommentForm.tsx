@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 
-import s from './CommentForm.module.scss';
+import { Input, Textarea } from '@/components';
 
-import { Textarea } from '@/components';
+import s from './CommentForm.module.scss';
 
 import type { FormEvent } from 'react';
 
@@ -26,29 +26,29 @@ const CommentForm = (props: Props) => {
     }
     onSubmit(nameValue, commentValue);
   }
-  
+
   return (
     <form onSubmit={handleSubmit} className={s['comment-form']}>
-      <input
+      <Input
+        name="name"
+        placeholder="Ваше имя"
         value={nameValue}
         onChange={(evt) => {
           setNameValue(evt.target.value);
         }}
-        type="text"
-        className={s['input']}
-        id="name"
-        placeholder="Ваше имя"
       />
       <Textarea
         value={commentValue}
-        id="comment"
+        name="comment"
         placeholder="Ваш комментарий"
         minHeight={51}
         onChange={(evt) => {
           setCommentValue(evt.target.value);
         }}
       />
-      <button className={`${s['comment-submit']} ${disabled && s['disabled']}`}>Отправить</button>
+      <button className={`${s['comment-submit']} ${disabled && s['disabled']}`}>
+        Отправить
+      </button>
     </form>
   );
 };

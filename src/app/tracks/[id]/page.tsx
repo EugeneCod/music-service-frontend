@@ -10,7 +10,7 @@ import s from './page.module.scss';
 
 const TrackPage = () => {
   const track = tracks[0];
-  const { id, name, artist, text, listens, audio, picture, albumId, comments } = track;
+  const { name, artist, text, listens, picture, comments } = track;
 
   function handleSubmitComment(nameValue: string, commentValue: string) {
     console.table({ nameValue, commentValue });
@@ -23,7 +23,13 @@ const TrackPage = () => {
       </Link>
       <article className={s['track-container']}>
         <div className={s['top-container']}>
-          <Image className={s['image']} width={50} height={50} src={picture} alt="Обложка" />
+          <Image
+            className={s['image']}
+            width={50}
+            height={50}
+            src={picture}
+            alt="Обложка"
+          />
           <div className={s['info-block']}>
             <p className={s['artist']}>Исполнитель: {artist}</p>
             <h1 className={s['name']}>Название трека: {name}</h1>

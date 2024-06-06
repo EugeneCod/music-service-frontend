@@ -22,5 +22,5 @@ export interface Track {
   picture: string;
   audio: string;
   albumId: string;
-  comments: Comment[]; 
+  comments: Comment[];
 }

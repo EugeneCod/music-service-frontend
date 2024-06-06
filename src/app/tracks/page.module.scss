@@ -41,10 +41,12 @@
   color: $fcol-main;
   cursor: pointer;
   position: relative;
-  transition: transform .2s ease, color .8s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.8s ease;
 
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
     color: #000;
   }
 
