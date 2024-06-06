@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { Input, Textarea } from '@/components';
+import { TextInput, Textarea } from '@/components';
 
 import s from './CommentForm.module.scss';
 
@@ -29,7 +29,7 @@ const CommentForm = (props: Props) => {
 
   return (
     <form onSubmit={handleSubmit} className={s['comment-form']}>
-      <Input
+      <TextInput
         name="name"
         placeholder="Ваше имя"
         value={nameValue}

@@ -1,9 +1,10 @@
 export { default as CommentForm } from './CommentForm/CommentForm';
 export { default as CommentsList } from './CommentsList/CommentsList';
 export { default as Container } from './Container/Container';
-export { default as Input } from './Input/Input';
+export { default as FileUpload } from './FileUpload/FileUpload';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as StepWrapper } from './StepWrapper/StepWrapper';
 export { default as Textarea } from './Textarea/Textarea';
+export { default as TextInput } from './TextInput/TextInput';
 export { default as TrackItem } from './TrackItem/TrackItem';
 export { default as TrackList } from './TrackList/TrackList';

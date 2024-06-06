@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './Input.module.scss';
+import s from './TextInput.module.scss';
 
 interface Props {
   name: string;
@@ -9,7 +9,7 @@ interface Props {
   onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = (props: Props) => {
+const TextInput = (props: Props) => {
   const { name, placeholder, value, onChange } = props;
 
   return (
@@ -24,4 +24,4 @@ const Input = (props: Props) => {
   );
 };
 
-export default Input;
+export default TextInput;
